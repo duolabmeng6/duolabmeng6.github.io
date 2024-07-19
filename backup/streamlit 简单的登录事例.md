@@ -1,5 +1,6 @@
 streamlit 的cookie库挺坑的 这里我重新写了一份能用的 streamlit 登录后保持登录状态的事例
 
+`st_local_storage.py`
 ```
 # NOTE: This feature uses browser local storage! AKA it stores data on a viewer's
 # machine. This may have privacy and compliance implications for your app. Be sure
@@ -85,6 +86,7 @@ class StLocalStorage:
 
 ```
 
+`login.py`
 ```
 import streamlit as st
 import st_local_storage
@@ -106,4 +108,9 @@ else:
         else:
             st.error("账号或密码错误")
 
+```
+
+运行
+```
+streamlit run login.py
 ```

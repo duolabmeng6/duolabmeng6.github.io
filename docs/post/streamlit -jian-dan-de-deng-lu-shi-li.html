@@ -12,6 +12,7 @@
     </script>
 <meta name="description" content="streamlit 的cookie库挺坑的 这里我重新写了一份能用的 streamlit 登录后保持登录状态的事例
 
+`st_local_storage.py`
 ```
 # NOTE: This feature uses browser local storage! AKA it stores data on a viewer's
 # machine. This may have privacy and compliance implications for your app. Be sure
@@ -97,6 +98,7 @@ class StLocalStorage:
 
 ```
 
+`login.py`
 ```
 import streamlit as st
 import st_local_storage
@@ -119,10 +121,15 @@ else:
             st.error('账号或密码错误')
 
 ```
-。">
+
+运行
+```
+streamlit run login.py
+```。">
 <meta property="og:title" content="streamlit 简单的登录事例">
 <meta property="og:description" content="streamlit 的cookie库挺坑的 这里我重新写了一份能用的 streamlit 登录后保持登录状态的事例
 
+`st_local_storage.py`
 ```
 # NOTE: This feature uses browser local storage! AKA it stores data on a viewer's
 # machine. This may have privacy and compliance implications for your app. Be sure
@@ -208,6 +215,7 @@ class StLocalStorage:
 
 ```
 
+`login.py`
 ```
 import streamlit as st
 import st_local_storage
@@ -230,7 +238,11 @@ else:
             st.error('账号或密码错误')
 
 ```
-。">
+
+运行
+```
+streamlit run login.py
+```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://duolabmeng6.github.io/post/streamlit%20-jian-dan-de-deng-lu-shi-li.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -291,6 +303,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><p>streamlit 的cookie库挺坑的 这里我重新写了一份能用的 streamlit 登录后保持登录状态的事例</p>
+<p><code class="notranslate">st_local_storage.py</code></p>
 <pre class="notranslate"><code class="notranslate"># NOTE: This feature uses browser local storage! AKA it stores data on a viewer's
 # machine. This may have privacy and compliance implications for your app. Be sure
 # to take that into account with any usage.
@@ -374,6 +387,7 @@ class StLocalStorage:
             return None
 
 </code></pre>
+<p><code class="notranslate">login.py</code></p>
 <pre class="notranslate"><code class="notranslate">import streamlit as st
 import st_local_storage
 st_ls = st_local_storage.StLocalStorage()
@@ -394,6 +408,9 @@ else:
         else:
             st.error("账号或密码错误")
 
+</code></pre>
+<p>运行</p>
+<pre class="notranslate"><code class="notranslate">streamlit run login.py
 </code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
