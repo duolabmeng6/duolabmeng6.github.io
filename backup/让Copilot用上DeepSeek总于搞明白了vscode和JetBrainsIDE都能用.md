@@ -1,6 +1,3 @@
-# 前言
-论坛的教程太复杂啦 我给一个最简单的最简洁的
-
 # 1.下载override项目
 [linux-do/override: 啥也不是 (github.com)](https://github.com/linux-do/override)
 

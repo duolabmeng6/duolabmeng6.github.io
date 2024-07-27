@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>多啦b梦的博客</title><link>https://duolabmeng6.github.io</link><description>记录技术与生活</description><copyright>多啦b梦的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://duolabmeng6.github.io</link></image><lastBuildDate>Sat, 27 Jul 2024 19:50:13 +0000</lastBuildDate><managingEditor>多啦b梦的博客</managingEditor><ttl>60</ttl><webMaster>多啦b梦的博客</webMaster><item><title>让Copilot用上DeepSeek总于搞明白了vscode和JetBrainsIDE都能用</title><link>https://duolabmeng6.github.io/post/rang-Copilot-yong-shang-DeepSeek-zong-yu-gao-ming-bai-le-vscode-he-JetBrainsIDE-du-neng-yong.html</link><description># 前言&#13;
-论坛的教程太复杂啦 我给一个最简单的最简洁的&#13;
-&#13;
-# 1.下载override项目&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>多啦b梦的博客</title><link>https://duolabmeng6.github.io</link><description>记录技术与生活</description><copyright>多啦b梦的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://duolabmeng6.github.io</link></image><lastBuildDate>Sat, 27 Jul 2024 19:51:32 +0000</lastBuildDate><managingEditor>多啦b梦的博客</managingEditor><ttl>60</ttl><webMaster>多啦b梦的博客</webMaster><item><title>让Copilot用上DeepSeek总于搞明白了vscode和JetBrainsIDE都能用</title><link>https://duolabmeng6.github.io/post/rang-Copilot-yong-shang-DeepSeek-zong-yu-gao-ming-bai-le-vscode-he-JetBrainsIDE-du-neng-yong.html</link><description># 1.下载override项目&#13;
 [linux-do/override: 啥也不是 (github.com)](https://github.com/linux-do/override)&#13;
 &#13;
 新建这个文件 config.conf &#13;
