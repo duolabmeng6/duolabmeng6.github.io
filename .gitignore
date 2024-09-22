@@ -2,3 +2,5 @@
 *.lock
 /test/
 .DS_Store
+/hugo/content/posts/*
+

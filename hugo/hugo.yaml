@@ -3,10 +3,12 @@ baseURL: "https://my.rongyiapi.com/"
 # 网站标题
 title: 哆啦b梦的博客
 # 每页显示的文章数量
-paginate: 5
+pagination:
+  pagerSize: 5  # 新的配置方式
 # 使用的主题
 theme: PaperMod
 # 网站的语言代码
+languageCode: zh
 defaultContentLanguage: zh
 
 # 启用robots.txt文件
@@ -25,22 +27,7 @@ minify:
 
 # 参数设置
 params:
-  profileMode:
-          # 啟用或禁用
-          enabled: true
-          title: 你好 👋
-          subtitle: |
-            我叫 duolabmeng6。我喜欢写代码~记录技术与生活
-          imageUrl: https://avatars.githubusercontent.com/u/59047063?v=4
-          imageWidth: 120
-          imageHeight: 120
-          buttons:
-          - name: 文章
-            url: posts
-          - name: 标签
-            url: tags
   # 环境设置，production模式会启用各种SEO相关功能
-  env: production # 启用谷歌分析、开放图谱、推特卡片和架构
   title: 哆啦b梦的博客
   description: "记录技术与生活"
   keywords: [duolabmeng6, 哆啦b梦]
@@ -48,9 +35,25 @@ params:
   # 日期格式
   DateFormat: "2006年1月2日"
   # 默认主题模式
-  defaultTheme: auto 
+  defaultTheme: auto
   # 是否禁用主题切换按钮
   disableThemeToggle: false
+
+  profileMode:
+    # 啟用或禁用
+    enabled: true
+    title: 你好 👋
+    subtitle: |
+      我叫 duolabmeng6。我喜欢写代码~喜欢记录技术与生活
+    imageUrl: https://avatars.githubusercontent.com/u/59047063?v=4
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+    - name: 文章
+      url: posts
+    - name: 标签
+      url: tags
+
 
   # 文章页面显示设置
   ShowReadingTime: true # 显示阅读时间
@@ -78,15 +81,15 @@ menu:
       url: search/
       pageRef: /search
     - identifier: posts
-      name: 所有文章
+      name: 📚所有文章
       url: /posts/
       weight: 20
     - identifier: tags
-      name: 标签
+      name: 🔖标签
       url: /tags/
       weight: 20
     - identifier: Github
-      name: Github
+      name: 🔗Github
       url: https://github.com/duolabmeng6
       weight: 30
 
@@ -99,7 +102,7 @@ markup:
     codeFences: true # 代码围栏
     guessSyntax: true # 猜测语法
     lineNos: true # 显示行号
-    style: monokai # 高亮样式
+    style: github # 高亮样式
 
 
 outputs:
