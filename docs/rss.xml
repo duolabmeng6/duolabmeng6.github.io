@@ -1,5 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>多啦b梦的博客</title><link>https://duolabmeng6.github.io</link><description>记录技术与生活</description><copyright>多啦b梦的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://duolabmeng6.github.io</link></image><lastBuildDate>Sat, 27 Jul 2024 22:13:43 +0000</lastBuildDate><managingEditor>多啦b梦的博客</managingEditor><ttl>60</ttl><webMaster>多啦b梦的博客</webMaster><item><title>写了个ollama的管理面板软件</title><link>https://duolabmeng6.github.io/post/xie-le-ge-ollama-de-guan-li-mian-ban-ruan-jian.html</link><description># 前言&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>多啦b梦的博客</title><link>https://duolabmeng6.github.io</link><description>记录技术与生活</description><copyright>多啦b梦的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://duolabmeng6.github.io</link></image><lastBuildDate>Sun, 22 Sep 2024 17:26:50 +0000</lastBuildDate><managingEditor>多啦b梦的博客</managingEditor><ttl>60</ttl><webMaster>多啦b梦的博客</webMaster><item><title>chrome的html代码跳转插件 LocatorJS</title><link>https://duolabmeng6.github.io/post/chrome-de-html-dai-ma-tiao-zhuan-cha-jian-%20LocatorJS.html</link><description>https://chromewebstore.google.com/detail/LocatorJS/npbfdllefekhdplbkdigpncggmojpefi&#13;
+这就很神器 真好用&#13;
+&#13;
+```&#13;
+cursor://file/${projectPath}${filePath}:${line}:${column}&#13;
+&#13;
+webstorm://open?file=${projectPath}${filePath}&amp;line=${line}&amp;column=${column}&#13;
+&#13;
+vscode://file/${projectPath}${filePath}:${line}:${column}&#13;
+```&#13;
+&#13;
+意外发现这样子也可以跳转代码 压根不不要开发插件啊 &#13;
+&#13;
+牛逼 直接节约了一个插件以前还开发了个跳转跳转代码的插件呢...原来不需要的。</description><guid isPermaLink="true">https://duolabmeng6.github.io/post/chrome-de-html-dai-ma-tiao-zhuan-cha-jian-%20LocatorJS.html</guid><pubDate>Sun, 22 Sep 2024 17:24:03 +0000</pubDate></item><item><title>写了个ollama的管理面板软件</title><link>https://duolabmeng6.github.io/post/xie-le-ge-ollama-de-guan-li-mian-ban-ruan-jian.html</link><description># 前言&#13;
 总是觉得ollama命令行的方式很麻烦,随手写一个ollama的管理面板&#13;
 &#13;
 # ollama下载&#13;
