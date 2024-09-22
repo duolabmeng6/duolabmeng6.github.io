@@ -1,0 +1,106 @@
+# 网站的基本URL
+baseURL: "https://my.rongyiapi.com/"
+# 网站标题
+title: 哆啦b梦的博客
+# 每页显示的文章数量
+paginate: 5
+# 使用的主题
+theme: PaperMod
+# 网站的语言代码
+defaultContentLanguage: zh
+
+# 启用robots.txt文件
+enableRobotsTXT: true
+# 不构建草稿文章
+buildDrafts: false
+# 不构建未来日期的文章
+buildFuture: false
+# 不构建过期的文章
+buildExpired: false
+
+# 最小化设置
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# 参数设置
+params:
+  profileMode:
+          # 啟用或禁用
+          enabled: true
+          title: 你好 👋
+          subtitle: |
+            我叫 duolabmeng6。我喜欢写代码~记录技术与生活
+          imageUrl: https://avatars.githubusercontent.com/u/59047063?v=4
+          imageWidth: 120
+          imageHeight: 120
+          buttons:
+          - name: 文章
+            url: posts
+          - name: 标签
+            url: tags
+  # 环境设置，production模式会启用各种SEO相关功能
+  env: production # 启用谷歌分析、开放图谱、推特卡片和架构
+  title: 哆啦b梦的博客
+  description: "记录技术与生活"
+  keywords: [duolabmeng6, 哆啦b梦]
+  author: duolabmeng6
+  # 日期格式
+  DateFormat: "2006年1月2日"
+  # 默认主题模式
+  defaultTheme: auto 
+  # 是否禁用主题切换按钮
+  disableThemeToggle: false
+
+  # 文章页面显示设置
+  ShowReadingTime: true # 显示阅读时间
+  ShowShareButtons: false # 显示分享按钮
+  ShowPostNavLinks: true # 显示上一篇/下一篇导航
+  ShowBreadCrumbs: false # 显示面包屑导航
+  ShowCodeCopyButtons: true # 显示代码复制按钮
+  ShowWordCount: true # 显示字数统计
+  ShowRssButtonInSectionTermList: false # 在分类和标签列表中显示RSS按钮
+  UseHugoToc: true # 使用Hugo的目录功能
+  disableSpecial1stPost: false # 是否禁用第一篇文章的特殊样式
+  disableScrollToTop: false # 是否禁用返回顶部按钮
+  comments: false # 是否启用评论
+  hidemeta: false # 是否隐藏元数据（如发布日期、作者等）
+  hideSummary: true # 是否隐藏摘要
+  showtoc: true # 是否显示目录
+  tocopen: true # 目录是否默认展开
+
+
+# 菜单设置
+menu:
+  main:
+    - identifier: search
+      name: 🔍搜索
+      url: search/
+      pageRef: /search
+    - identifier: posts
+      name: 所有文章
+      url: /posts/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: Github
+      name: Github
+      url: https://github.com/duolabmeng6
+      weight: 30
+
+# 语法高亮设置
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    anchorLineNos: true # 行号锚点
+    codeFences: true # 代码围栏
+    guessSyntax: true # 猜测语法
+    lineNos: true # 显示行号
+    style: monokai # 高亮样式
+
+
+outputs:
+  home: [HTML, JSON]
