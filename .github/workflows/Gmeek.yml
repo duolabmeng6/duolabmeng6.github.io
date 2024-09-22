@@ -1,4 +1,4 @@
-name: build Gmeek
+name: 构建 Gmeek
 
 on:
   workflow_dispatch:
@@ -9,31 +9,31 @@ on:
     
 jobs:
   build:
-    name: Generate blog
+    name: 生成博客
     runs-on: ubuntu-20.04
     if: ${{ github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' }}
     permissions: write-all
     steps:
-      - name: Checkout
+      - name: 检出代码
         uses: actions/checkout@v4
 
-      - name: Setup Pages
+      - name: 设置 Pages
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Get config.json
+      - name: 获取 config.json
         run: |
-          echo "====== check config.josn file ======"
+          echo "====== 检查 config.josn 文件 ======"
           cat config.json
-          echo "====== check config.josn end  ======"
+          echo "====== 检查 config.josn 结束 ======"
           sudo apt-get install jq
 
-      - name: Set up Python
+      - name: 设置 Python
         uses: actions/setup-python@v5
         with:
           python-version: 3.8
 
-      - name: Clone source code
+      - name: 克隆源代码
         run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
@@ -41,12 +41,12 @@ jobs:
           lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
           if [ $GMEEK_VERSION == 'last' ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: |
           pip install --upgrade pip
           pip install -r /opt/Gmeek/requirements.txt
 
-      - name: Generate new html
+      - name: 生成新的 HTML
         run: |
           cp -r ./* /opt/Gmeek/
           cd /opt/Gmeek/
@@ -55,22 +55,22 @@ jobs:
           cp -a /opt/Gmeek/backup ${{ github.workspace }} 
           cp /opt/Gmeek/blogBase.json ${{ github.workspace }} 
           
-      - name: update html
+      - name: 更新 HTML
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"
           git config --local user.name "${{ github.repository_owner }}"
           git add .
-          git commit -a -m '🎉auto update by Gmeek action' || echo "nothing to commit"
-          git push || echo "nothing to push"
+          git commit -a -m '🎉Gmeek 操作自动更新' || echo "没有需要提交的内容"
+          git push || echo "没有需要推送的内容"
           sleep 3
           
-      - name: Upload artifact
+      - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'docs/.'
           
   deploy:
-    name: Deploy blog
+    name: 部署博客
     runs-on: ubuntu-20.04
     needs: build
     permissions:
@@ -84,6 +84,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 部署到 GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
