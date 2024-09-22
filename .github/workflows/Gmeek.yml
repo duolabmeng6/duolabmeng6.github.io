@@ -62,26 +62,26 @@ jobs:
           git push || echo "没有需要推送的内容"
           sleep 3
           
-      - name: 上传构建产物
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'docs/.'
+      # - name: 上传构建产物
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: 'docs/.'
           
-  deploy:
-    name: 部署博客
-    runs-on: ubuntu-20.04
-    needs: build
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    concurrency:
-      group: "pages"
-      cancel-in-progress: false
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: 部署到 GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # deploy:
+  #   name: 部署博客
+  #   runs-on: ubuntu-20.04
+  #   needs: build
+  #   permissions:
+  #     contents: write
+  #     pages: write
+  #     id-token: write
+  #   concurrency:
+  #     group: "pages"
+  #     cancel-in-progress: false
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     - name: 部署到 GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
