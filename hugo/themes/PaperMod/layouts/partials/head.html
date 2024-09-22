@@ -1,3 +1,10 @@
+
+
+{{ if .Site.Params.customCSS }}
+{{ $style := resources.Match "css/**.css" | resources.Concat "custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+{{ end }}
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

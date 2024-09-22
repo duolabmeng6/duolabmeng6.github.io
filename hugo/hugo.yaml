@@ -38,6 +38,7 @@ params:
   defaultTheme: auto
   # 是否禁用主题切换按钮
   disableThemeToggle: false
+  customCSS: true
 
   profileMode:
     # 啟用或禁用
@@ -107,3 +108,4 @@ markup:
 
 outputs:
   home: [HTML, JSON]
+
