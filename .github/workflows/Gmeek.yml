@@ -36,8 +36,6 @@ jobs:
       - name: 克隆源代码
         run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
-#          git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;
-          # 当前目录下gmeek 复制到 /opt/Gmeek
           cp -r ./gmeek /opt/Gmeek
           cd /opt/Gmeek/
           lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
