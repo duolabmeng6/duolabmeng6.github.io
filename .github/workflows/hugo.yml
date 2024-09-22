@@ -53,6 +53,7 @@ jobs:
       - name: 复制备份文件到Hugo目录
         run: |
           ls -la
+          mkdir -p hugo/content/posts
           cp -r backup/* hugo/content/posts/
       - name: 使用 Hugo 构建
         env:
