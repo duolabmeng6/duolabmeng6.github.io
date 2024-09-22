@@ -57,6 +57,7 @@ jobs:
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"
           git config --local user.name "${{ github.repository_owner }}"
+          rm -rf ./docs/*
           git add .
           git commit -a -m '🎉Gmeek 操作自动更新' || echo "没有需要提交的内容"
           git push || echo "没有需要推送的内容"
