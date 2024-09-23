@@ -140,7 +140,6 @@ http://127.0.0.1:11434
 
 配置好 FastGPT 后，就能使用了。
 
-![FastGPT Screenshot](images/screenshot_1717844679328.png)
 
 ### FastGPT 使用
 
