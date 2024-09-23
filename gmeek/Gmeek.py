@@ -47,6 +47,10 @@ class GMEEK():
         self.post_folder='post/'
         self.backup_dir='backup/'
         self.post_dir=self.root_dir+self.post_folder
+        
+        # 创建目录  self.root_dir
+        if not os.path.exists(self.root_dir):
+            os.makedirs(self.root_dir)
 
         user = Github(self.options.github_token)
         self.repo = self.get_repo(user, options.repo_name)
