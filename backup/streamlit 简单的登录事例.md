@@ -2,6 +2,8 @@
 title: "streamlit 简单的登录事例"
 date: 2024-07-19T22:59:56
 tags: ['技术分享']
+commentNum: 4
+issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/2"
 ---
 
 streamlit 的cookie库挺坑的 这里我重新写了一份能用的 streamlit 登录后保持登录状态的事例

@@ -2,6 +2,8 @@
 title: "让Copilot用上DeepSeek总于搞明白了vscode和JetBrainsIDE都能用"
 date: 2024-07-27T19:48:14
 tags: ['技术分享']
+commentNum: 0
+issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/3"
 ---
 
 # 1.下载override项目
