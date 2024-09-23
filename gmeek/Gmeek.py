@@ -139,6 +139,7 @@ class GMEEK():
             raise Exception("markdown2html error: {}".format(e))
 
     def renderHtml(self,template,blogBase,postListJson,htmlDir,icon):
+        return 
         file_loader = FileSystemLoader('templates')
         env = Environment(loader=file_loader)
         template = env.get_template(template)
