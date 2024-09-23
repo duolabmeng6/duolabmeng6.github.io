@@ -1,8 +1,32 @@
 
 
+
 {{ if .Site.Params.customCSS }}
-{{ $style := resources.Match "css/**.css" | resources.Concat "custom.css" | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+{{ $cssFiles := resources.Match "custom_css/*.css" }}
+{{ $cssCount := len $cssFiles }}
+
+<script>
+{{ range $cssFiles }}
+console.log("导入: {{ .Name }} {{ .RelPermalink }}");
+{{ end }}
+</script>
+
+{{ $script := $cssFiles | resources.Concat "custom.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" media="screen">
+{{ end }}
+
+
+{{ if .Site.Params.customJS }}
+{{ $jsFiles := resources.Match "custom_js/*.js" }}
+{{ $jsCount := len $jsFiles }}
+<script>
+{{ range $jsFiles }}
+console.log("导入: {{ .Name }} {{ .RelPermalink }}");
+{{ end }}
+</script>
+
+{{ $script := $jsFiles | resources.Concat "custom.js" | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
 {{ end }}
 
 <meta charset="utf-8">

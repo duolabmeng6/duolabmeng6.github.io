@@ -24,3 +24,36 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
     padding: 20px; /* 添加内边距,使内容不会紧贴边缘 */
 }
+/* 深色模式样式 */
+.dark .main:has(.post-single) {
+    background-color: rgba(0, 0, 0, 0.8); /* 深色模式下设置为80%透明度的黑色 */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* 调整阴影颜色 */
+}
+
+
+.toc {
+    // ... 现有样式 ...
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease;
+}
+
+.dark .toc {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-color: #444;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.dark .toc-title {
+    border-bottom-color: #444;
+    color: #ccc;
+}
+
+.dark .toc a {
+    color: #bbb;
+    border-bottom-color: #444;
+}
+
+.dark .toc a:hover,
+.dark .toc a.active {
+    color: #fff;
+}

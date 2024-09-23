@@ -39,7 +39,7 @@ params:
   # 是否禁用主题切换按钮
   disableThemeToggle: false
   customCSS: true
-
+  customJS: true
   profileMode:
     # 啟用或禁用
     enabled: true
@@ -79,8 +79,8 @@ params:
   comments: false # 是否启用评论
   hidemeta: false # 是否隐藏元数据（如发布日期、作者等）
   hideSummary: true # 是否隐藏摘要
-  showtoc: true # 是否显示目录
-  tocopen: true # 目录是否默认展开
+  showtoc: false # 是否显示目录
+  tocopen: false # 目录是否默认展开
 
 
 # 菜单设置
