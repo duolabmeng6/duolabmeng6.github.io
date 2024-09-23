@@ -403,8 +403,8 @@ class GMEEK():
             if len(issue.labels) > 0:
                 f.write(f'tags: {[label.name for label in issue.labels]}\n')
             f.write(f'commentNum: {self.blogBase[listJsonName][postNum]["commentNum"]}\n')  # 添加 commentNum
+            f.write(f'issueLink: "https://github.com/{options.repo_name}/issues/{issue.number}"\n')  # 添加 issueLink
             f.write('---\n\n')
-
             if issue.body==None:
                 f.write('')
             else:

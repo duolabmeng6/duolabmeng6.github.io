@@ -60,6 +60,8 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+  
+  <a href="{{ .Params.issueLink }}" target="_blank" style="color: transparent;">编辑</a>
 </article>
 
 {{- end }}{{/* end main */}}
