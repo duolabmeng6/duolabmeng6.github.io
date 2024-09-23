@@ -2,6 +2,8 @@
 title: "chrome的html代码跳转插件 LocatorJS"
 date: 2024-09-22T17:24:03
 tags: ['技术分享']
+commentNum: 0
+issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/5"
 ---
 
 https://chromewebstore.google.com/detail/LocatorJS/npbfdllefekhdplbkdigpncggmojpefi

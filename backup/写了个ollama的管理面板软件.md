@@ -2,6 +2,8 @@
 title: "写了个ollama的管理面板软件"
 date: 2024-07-27T22:10:32
 tags: ['软件开发']
+commentNum: 0
+issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/4"
 ---
 
 # 前言
