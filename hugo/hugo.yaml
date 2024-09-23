@@ -40,6 +40,7 @@ params:
   disableThemeToggle: false
   customCSS: true
   customJS: true
+  
   profileMode:
     # 啟用或禁用
     enabled: true
@@ -64,6 +65,7 @@ params:
       url: tags
     - name: Github
       url: https://github.com/duolabmeng6
+  
 
   # 文章页面显示设置
   ShowReadingTime: true # 显示阅读时间
@@ -76,7 +78,7 @@ params:
   UseHugoToc: true # 使用Hugo的目录功能
   disableSpecial1stPost: false # 是否禁用第一篇文章的特殊样式
   disableScrollToTop: false # 是否禁用返回顶部按钮
-  comments: false # 是否启用评论
+  comments: true # 是否启用评论
   hidemeta: false # 是否隐藏元数据（如发布日期、作者等）
   hideSummary: true # 是否隐藏摘要
   showtoc: false # 是否显示目录
