@@ -3,10 +3,11 @@ name: 将 Hugo 站点部署到 Pages
 
 on:
   # 在针对默认分支的推送时运行
-  push:
-    branches:
-      - main
-
+  # push:
+  #   branches:
+  #     - main
+  repository_dispatch:
+    types: [trigger-hugo]
   # 允许从 Actions 选项卡手动运行此工作流
   workflow_dispatch:
 
