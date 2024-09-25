@@ -201,8 +201,8 @@ class GMEEK():
         postBase["postSourceUrl"]=issue["postSourceUrl"]
         postBase["repoName"]=options.repo_name
         
-        if issue["labels"][0] in self.blogBase["singlePage"]:
-            postBase["bottomText"]=''
+        # if issue["labels"][0] in self.blogBase["singlePage"]:
+        #     postBase["bottomText"]=''
 
         if '<pre class="notranslate">' in post_body:
             keys=['sun','moon','sync','home','github','copy','check']
@@ -320,13 +320,15 @@ class GMEEK():
         feed.rss_file(self.root_dir+'rss.xml')
 
     def addOnePostJson(self,issue):
-        if len(issue.labels) == 0:
-            # 如果没有标签,添加一个默认标签
-            default_label = self.repo.create_label("技术分享", "A31B79")
-            issue.add_to_labels(default_label)
-            
-        if len(issue.labels)>=1:
-            if issue.labels[0].name in self.blogBase["singlePage"]:
+        # if len(issue.labels)==0:
+        #     exit("aaaa")
+
+        if len(issue.labels)>=0:
+            try:
+                name = issue.labels[0].name
+            except:
+                name = "未分类"
+            if name in self.blogBase["singlePage"]:
                 listJsonName='singeListJson'
                 htmlFile='{}.html'.format(self.createFileName(issue,useLabel=True))
                 gen_Html = self.root_dir+htmlFile
@@ -413,6 +415,8 @@ class GMEEK():
             f.write(f'date: {datetime.datetime.fromtimestamp(self.blogBase[listJsonName][postNum]["createdAt"]).strftime("%Y-%m-%dT%H:%M:%S%z")}\n')
             if len(issue.labels) > 0:
                 f.write(f'tags: {[label.name for label in issue.labels]}\n')
+            else:
+                f.write(f'tags: ["技术分享"]\n')
             f.write(f'commentNum: {self.blogBase[listJsonName][postNum]["commentNum"]}\n')  # 添加 commentNum
             f.write(f'issueLink: "https://github.com/{options.repo_name}/issues/{issue.number}"\n')  # 添加 issueLink
             f.write('---\n\n')
@@ -455,7 +459,10 @@ class GMEEK():
 
     def createFileName(self,issue,useLabel=False):
         if useLabel==True:
-            fileName=issue.labels[0].name
+            try:
+                fileName=issue.labels[0].name
+            except:
+                fileName="未分类"
         else:
             if self.blogBase["urlMode"]=="issue":
                 fileName=str(issue.number)
