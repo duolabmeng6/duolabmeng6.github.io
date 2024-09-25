@@ -320,6 +320,11 @@ class GMEEK():
         feed.rss_file(self.root_dir+'rss.xml')
 
     def addOnePostJson(self,issue):
+        if len(issue.labels) == 0:
+            # 如果没有标签,添加一个默认标签
+            default_label = self.repo.create_label("技术分享", "A31B79")
+            issue.add_to_labels(default_label)
+            
         if len(issue.labels)>=1:
             if issue.labels[0].name in self.blogBase["singlePage"]:
                 listJsonName='singeListJson'
