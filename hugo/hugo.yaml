@@ -84,6 +84,14 @@ params:
   showtoc: false # 是否显示目录
   tocopen: false # 目录是否默认展开
 
+  # 社交媒体配置
+  social:
+    - name: github
+      url: "https://github.com/duolabmeng6"
+    # 如果需要其他社交媒体，可以按照相同格式添加
+    # - name: twitter
+    #   url: "your-twitter-url"
+
 
 # 菜单设置
 menu:
