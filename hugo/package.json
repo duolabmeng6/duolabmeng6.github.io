@@ -2,6 +2,7 @@
   "name": "your-package",
   "version": "0.0.1",
   "scripts": {
+    "prebuild": "mkdir -p ./content/posts && cp -r ../backup/* ./content/posts/",
     "build": "hugo",
     "create": "hugo new",
     "serve": "hugo server"
