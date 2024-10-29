@@ -6,10 +6,6 @@
     "create": "hugo new",
     "serve": "hugo server"
   },
-  "hugo-bin": {
-    "buildTags": "extended",
-    "version": "0.133.5"
-  },
   "devDependencies": {
     "hugo-bin": "^0.133.5"
   }
