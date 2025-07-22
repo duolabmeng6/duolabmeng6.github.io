@@ -13,6 +13,7 @@ issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/31"
 - 统一使用 JSON 格式
 - 路由前缀：`/api/v1`
 - 认证方式：`Authorization: Bearer <token>`
+- HTTP状态码统一为200
 
 ## 路由规范
 - 资源名使用复数：`/users`、`/user_profiles`
@@ -33,7 +34,7 @@ issueLink: "https://github.com/duolabmeng6/duolabmeng6.github.io/issues/31"
 }
 ```
 
-## 状态码
+## code为业务状态码
 | 业务码  | 说明 |
 |--------|------|
 | 200 | 成功 |
